@@ -15,11 +15,18 @@ time.sleep(2)
 searchOps = "qwertyuiopasdfghjklzxcvbnm1234567890!\"£$%^&*()/-+.|¬`[];'#,/{}:@~<>?"
 searchQ = ""
 
-for z in range(2):
-    searchQ += searchOps[random.randint(0,len(searchOps)-1)]
+try:
+    for z in range(21):
+        searchQ += searchOps[random.randint(0,len(searchOps)-1)]
 
-for y in range(len(searchQ)):
-    search(searchQ[:y])
+    for y in range(len(searchQ)):
+        search(searchQ[:y])
+    
+    notification.notify(title = "Done", message="Rewards Collected")
+    
+except p.FailSafeException:
+    notification.notify(title = "Stopped", message="Execution Stopped")
     
     
-notification.notify(title = "Done", message="Rewards Collected")
+    
+    
