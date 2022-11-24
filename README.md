@@ -1,0 +1,1 @@
+This is a Python bot that automatically collects rewards on Edge by performing searches. I have provided the python code (for people who know how to run it) as well as the .exe file which is very simple to download and use with 1 click.Hope this helps collect large rewards.
