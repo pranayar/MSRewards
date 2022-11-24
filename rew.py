@@ -16,7 +16,7 @@ searchOps = "qwertyuiopasdfghjklzxcvbnm1234567890!\"£$%^&*()/-+.|¬`[];'#,/{}:@
 searchQ = ""
 
 try:
-    for z in range(21):
+    for z in range(55):
         searchQ += searchOps[random.randint(0,len(searchOps)-1)]
 
     for y in range(len(searchQ)):
