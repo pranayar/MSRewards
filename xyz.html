@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hello, world!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+</head>
+<body>
+  <h1>Welcome to Microsoft Rewards!</h1>
+  <button onclick="myMessage()">Click me</button>
+
+  <script>
+   
+    function myMessage()
+{
+var searchOps = "qwertyuiopasdfghjklzxcvbnm1234567890ABCDEFGHIJKLMNOPQRSTUXWXYZ"
+var searchQ = ""
+
+for ( var i=0;i<25;i++)
+{
+        searchQ += searchOps[Math.floor(Math.random() * searchOps.length)];
+}
+for(var y=0;y<searchQ.length;y++)
+{    
+  setTimeout(()=>{window.open("https://www.bing.com/search?q="+searchQ.slice(0,y),"_blank");},1000);
+  // window.open(searchQ.slice(0,y), '_blank');
+}
+}
+    </script>
+</body>
+</html>
