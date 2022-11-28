@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Hello, world!</title>
+  <title>Rewards</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
 </head>
 <body>
   <h1>Welcome to Microsoft Rewards!</h1>
+  <p>You will be redirected to searches which will collect the points automatically</p>
   <button onclick="myMessage()">Click me</button>
 
   <script>
@@ -16,16 +17,16 @@
 {
 var searchOps = "qwertyuiopasdfghjklzxcvbnm1234567890ABCDEFGHIJKLMNOPQRSTUXWXYZ"
 var searchQ = ""
-
+const x=[]
 for ( var i=0;i<25;i++)
-{
+{ 
         searchQ += searchOps[Math.floor(Math.random() * searchOps.length)];
+        x[i]=searchQ;
 }
-for(var y=0;y<searchQ.length;y++)
-{    
-  setTimeout(()=>{window.open("https://www.bing.com/search?q="+searchQ.slice(0,y),"_blank");},1000);
-  // window.open(searchQ.slice(0,y), '_blank');
-}
+  for(var i=0;i<x.length;i++)
+  {
+    window.open("https://www.bing.com/search?q="+x[i], '_blank');
+  }
 }
     </script>
 </body>
