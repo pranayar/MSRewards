@@ -20,6 +20,35 @@
 <a href="https://www.geeksforgeeks.org/create-model-using-custom-module-in-pytorch/">Article 12</a><br/>
 <a href="https://www.geeksforgeeks.org/multi-dimensional-inputs-in-pytorch-linear-method-in-python/">Article 13</a><br/>
 <a href="https://www.geeksforgeeks.org/convert-pair-to-value-using-map-in-pyspark/">Article 14</a><br/>
+<p>
+    
+    import networkx as nx
+import matplotlib.pyplot as plt
 
+# create a weighted graph
+G = nx.Graph()
+G.add_edge('A', 'B', weight=0.6)
+G.add_edge('A', 'C', weight=0.2)
+G.add_edge('C', 'D', weight=0.7)
+G.add_edge('C', 'E', weight=0.9)
+G.add_edge('E', 'F', weight=0.4)
+
+# get positions for the nodes
+pos = nx.spring_layout(G)
+
+# get edge weights as labels
+labels = nx.get_edge_attributes(G, 'weight')
+
+# draw the graph with nodes and edges
+nx.draw_networkx_nodes(G, pos)
+nx.draw_networkx_edges(G, pos)
+nx.draw_networkx_labels(G, pos)
+nx.draw_networkx_edge_labels(G, pos, edge_labels=labels)
+
+# show the graph
+plt.axis('off')
+plt.show()
+
+     </p>
 </body>
 </html>
